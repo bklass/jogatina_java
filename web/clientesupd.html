@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Clientes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+    <header role="banner">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-9 social">
+                        <a href="#"><span class="fa fa-twitter"></span></a>
+                        <a href="#"><span class="fa fa-facebook"></span></a>
+                        <a href="#"><span class="fa fa-instagram"></span></a>
+                        <a href="#"><span class="fa fa-youtube-play"></span></a>
+                        <a href="#"><span class="fa fa-vimeo"></span></a>
+                        <a href="#"><span class="fa fa-snapchat"></span></a>
+                    </div>
+                    <div class="col-3 search-top">
+                        <!-- <a href="#"><span class="fa fa-search"></span></a> -->
+                        <form action="#" class="search-top-form">
+                            <span class="icon fa fa-search"></span>
+                            <input type="text" id="s" placeholder="Procurar jogos...">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container logo-wrap">
+            <div class="row pt-5">
+                <div class="col-12 text-center">
+                    <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
+                    <h1 class="site-logo"><a href="index.html">Jogatina!</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-md  navbar-light bg-light">
+            <div class="container">
+
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clientes</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                <a class="dropdown-item" href="clientescad.html">Cadastrar</a>
+                                <a class="dropdown-item" href="clienteslist.html">Listar</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jogos</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                <a class="dropdown-item" href="jogoscad.html">Cadastrar</a>
+                                <a class="dropdown-item" href="jogoslist.html">Listar</a>
+                            </div>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mesaslist.html">Mesas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Reservas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contato</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- END header -->
+
+
+    <section class="site-section">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h1>Cadastro de clientes</h1>
+                </div>
+            </div>
+            <div class="row blog-entries">
+                <div class="col-md-12 col-lg-8 main-content">
+
+                    <form action="clienteslist.html" method="post" id="formcli">
+                        <div class="row">
+                            <div class="col-md-3 form-group">
+                                <label for="name">Nome</label>
+                                <input type="text" id="name" class="form-control">
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="cpf">CPF</label>
+                                <input type="text" id="cpf" class="form-control">
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control">
+                            </div>
+
+
+                            <div class="col-md-3 form-group">
+                                <label for="dtnasc">Data Nascimento</label>
+                                <input type="text" id="dtnasc" class="form-control" placeholder="dd-mm-aaaa">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="submit" value="Ok" class="btn btn-primary"  >
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var id = location.search.split('id=')[1];
+        $(document).ready(function(){           
+            
+            $.ajax({
+               type: "GET",
+               url: "http://localhost:8080/Jogatina/api/clientes/"+id,
+               success: function(json){
+                   $("#name").val(json.nome);
+                   $("#email").val(json.email);
+                   $("#cpf").val(json.CPF.toString());
+                   var dt = json.datanasc;
+                   dt = dt.substring(0,10);
+                   var dtnew = dt.split("-").reverse().join("-");
+                   $("#dtnasc").val(dtnew);
+               }
+            });            
+        });
+   
+        $("#formcli").submit(function(event){         
+            
+            var nome = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var cpf = document.getElementById("cpf").value;
+            var dtnasc = document.getElementById("dtnasc").value;
+            
+            dtnasc = dtnasc.split("-").reverse().join("-");
+            var dtnew = new Date(dtnasc+"T00:00:00-03:00").toISOString();
+            
+            let data = {};
+            data.nome = nome;
+            data.email = email;
+            data.CPF = parseInt(cpf);
+            data.datanasc = dtnew;
+            
+            $.ajax({
+                type: "PUT",
+                url: "http://localhost:8080/Jogatina/api/clientes/"+id,
+                data: JSON.stringify(data),
+                success: function(){},
+                dataType: "json",
+                contentType : "application/json"
+            });          
+        });   
+    </script>
+
+</body>
+</html>
+
+

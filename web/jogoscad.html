@@ -1,10 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Clientes</title>
+  <title>Jogos</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">
 
@@ -63,14 +62,14 @@
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
             <a class="nav-link active" href="index.html">Home</a>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clientes</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="clientescad.html">Cadastrar</a>
-                <a class="dropdown-item" href="clienteslist.html">Listar</a>
-              </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clientes</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="clientescad.html">Cadastrar</a>
+              <a class="dropdown-item" href="clienteslist.html">Listar</a>
+            </div>
 
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jogos</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
@@ -102,25 +101,51 @@
     <div class="container">
       <div class="row mb-4">
         <div class="col-md-6">
-          <h1>Lista de clientes</h1>
+          <h1>Cadastro de Jogos</h1>
         </div>
       </div>
       <div class="row blog-entries">
         <div class="col-md-12 col-lg-8 main-content">
 
+          <form action="jogoslist.html" method="post" id="formjogo">
+            <div class="row">
+              <div class="col-md-4 form-group">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" class="form-control ">
+              </div>
+              <div class="col-md-4 form-group">
+                <label for="editora">Editora</label>
+                <input type="text" id="editora" class="form-control ">
+              </div>
+              <div class="col-md-4 form-group">
+                <label for="anoLanc">Ano lançamento</label>
+                <input type="text" id="anoLanc" class="form-control ">
+              </div>
+              <div class="col-md-3 form-group">
+                <label for="estoque">Estoque</label>
+                <input type="text" id="estoque" class="form-control ">
+              </div>
+              <div class="col-md-3 form-group">
+                <label for="idadeInd">Idade indicada</label>
+                <input type="text" id="idadeInd" class="form-control ">
+              </div>
+              <div class="col-md-3 form-group">
+                <label for="tempo">Tempo de jogo</label>
+                <input type="text" id="tempo" class="form-control ">
+              </div>
 
-          <table>
-            <tr>
-              <th>Nome</th>
-              <th>RG</th>
-              <th>E-mail</th>
-              <th>Data de Nascimento</th>
-              <th></th>
-              <th></th>
-            </tr>
-
-          </table>
-
+              <div class="col-md-3 form-group">
+                <label for="njogadores">N de Jogadores</label>
+                <input type="text" id="njogadores" class="form-control ">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="submit" value="Ok" class="btn btn-primary">
+              </div>
+            </div>
+          </form>
+          
 
         </div>
       </div>
@@ -145,53 +170,38 @@
 
 
   <script src="js/main.js"></script>
-
-  <!--Chamada do WS-->
   <script>
-    $.ajax({
-      url : 'http://localhost:8080/Jogatina/api/clientes',
-      dataType: 'json',
-      type: 'GET',
-      success: function(json){                           
-        $.each(json, function(key, value){
-          var dt = value.datanasc;
-          dt = dt.substring(0,10);
-          var dtnew = dt.split("-").reverse().join("-");
-          
-          var html = '<tr>';
-          html += '<td>'+value.nome+'</td>';
-          html += '<td>'+value.CPF+'</td>';
-          html += '<td>'+value.email+'</td>';
-          html += '<td>'+dtnew+'</td>';
-          html += '<td><a class="link" onclick="redirectCliente('+value.id+')"><u>Editar</u></a></td>';
-          html += '<td><a class="link" href="" onclick="deleteCliente('+value.id+')"><u>Remover</u></a></td>';
-          html += '</tr>';
+    $("#formjogo").submit(function(event){         
 
-          $("table").append(html);
-        });    
-      }
-    });
-    
-    function deleteCliente(id){
-        var ok = confirm("Você tem certeza?");        
-        if(ok){
-            $.ajax({
-                'url' : 'http://localhost:8080/Jogatina/api/clientes/'+id,
-                type: 'DELETE',
-                error: function (xhr){
-                    alert("Erro: "+xhr.status+" :: "+xhr.responseText);
-                }
-            });
-        };
-    };
-    
-    function redirectCliente(id){
-        window.location.href = 'http://localhost:8080/Jogatina/clientesupd.html?id='+id;
-    };
+      var titulo = document.getElementById("titulo").value;
+      var editora = document.getElementById("editora").value;
+      var anoLanc = document.getElementById("anoLanc").value;
+      var njogadores = document.getElementById("njogadores").value;
+      var idadeInd = document.getElementById("idadeInd").value;
+      var estoque = document.getElementById("estoque").value;
+      var tempo = document.getElementById("tempo").value;
 
+
+
+      let data = {};
+      data.titulo = titulo;
+      data.editora = editora;
+      data.anoLanc = parseInt(anoLanc);
+      data.njogadores = parseInt(njogadores);
+      data.idadeInd = parseInt(idadeInd);
+      data.estoque = parseInt(estoque);
+      data.tempo = parseFloat(tempo);
+
+
+      $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/Jogatina/api/jogos",
+        data: JSON.stringify(data),
+        success: function(){},
+        dataType: "json",
+        contentType : "application/json"
+      });          
+    });   
   </script>
 </body>
 </html>
-
-
-

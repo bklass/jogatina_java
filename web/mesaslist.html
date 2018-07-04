@@ -1,10 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Clientes</title>
+  <title>Mesas</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">
 
@@ -102,24 +101,27 @@
     <div class="container">
       <div class="row mb-4">
         <div class="col-md-6">
-          <h1>Lista de clientes</h1>
+          <h1>Lista de Jogos</h1>
         </div>
       </div>
       <div class="row blog-entries">
         <div class="col-md-12 col-lg-8 main-content">
 
 
+
           <table>
             <tr>
               <th>Nome</th>
-              <th>RG</th>
-              <th>E-mail</th>
-              <th>Data de Nascimento</th>
-              <th></th>
-              <th></th>
+              <th>Capacidade</th>
+
+
+
             </tr>
 
           </table>
+
+
+
 
 
         </div>
@@ -145,53 +147,29 @@
 
 
   <script src="js/main.js"></script>
-
   <!--Chamada do WS-->
+
   <script>
     $.ajax({
-      url : 'http://localhost:8080/Jogatina/api/clientes',
+      url : 'http://localhost:8080/Jogatina/api/mesas',
       dataType: 'json',
       type: 'GET',
       success: function(json){                           
         $.each(json, function(key, value){
-          var dt = value.datanasc;
-          dt = dt.substring(0,10);
-          var dtnew = dt.split("-").reverse().join("-");
-          
+
+
           var html = '<tr>';
           html += '<td>'+value.nome+'</td>';
-          html += '<td>'+value.CPF+'</td>';
-          html += '<td>'+value.email+'</td>';
-          html += '<td>'+dtnew+'</td>';
-          html += '<td><a class="link" onclick="redirectCliente('+value.id+')"><u>Editar</u></a></td>';
-          html += '<td><a class="link" href="" onclick="deleteCliente('+value.id+')"><u>Remover</u></a></td>';
+          html += '<td>'+value.limiteJogadores+'</td>';
           html += '</tr>';
 
           $("table").append(html);
         });    
       }
     });
-    
-    function deleteCliente(id){
-        var ok = confirm("Você tem certeza?");        
-        if(ok){
-            $.ajax({
-                'url' : 'http://localhost:8080/Jogatina/api/clientes/'+id,
-                type: 'DELETE',
-                error: function (xhr){
-                    alert("Erro: "+xhr.status+" :: "+xhr.responseText);
-                }
-            });
-        };
-    };
-    
-    function redirectCliente(id){
-        window.location.href = 'http://localhost:8080/Jogatina/clientesupd.html?id='+id;
-    };
 
+  
   </script>
+
 </body>
 </html>
-
-
-
