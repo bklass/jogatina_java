@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Reservas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+  <header role="banner">
+    <div class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-9 social">
+            <a href="#"><span class="fa fa-twitter"></span></a>
+            <a href="#"><span class="fa fa-facebook"></span></a>
+            <a href="#"><span class="fa fa-instagram"></span></a>
+            <a href="#"><span class="fa fa-youtube-play"></span></a>
+            <a href="#"><span class="fa fa-vimeo"></span></a>
+            <a href="#"><span class="fa fa-snapchat"></span></a>
+          </div>
+          <div class="col-3 search-top">
+            <!-- <a href="#"><span class="fa fa-search"></span></a> -->
+            <form action="#" class="search-top-form">
+              <span class="icon fa fa-search"></span>
+              <input type="text" id="s" placeholder="Procurar jogos...">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container logo-wrap">
+      <div class="row pt-5">
+        <div class="col-12 text-center">
+          <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
+          <h1 class="site-logo"><a href="index.html">Jogatina!</a></h1>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md  navbar-light bg-light">
+     <div class="container">
+
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clientes</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="clientescad.html">Cadastrar</a>
+              <a class="dropdown-item" href="clienteslist.html">Listar</a>
+            </div>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jogos</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="jogoscad.html">Cadastrar</a>
+                <a class="dropdown-item" href="jogoslist.html">Listar</a>
+              </div>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mesaslist.html">Mesas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservas.html">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contato</a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END header -->
+<section class="site-section">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h1>Reservas</h1>
+        </div>
+      </div>
+      <div class="row blog-entries">
+        <div class="col-md-12 col-lg-8 main-content">
+
+
+
+          <table>
+            <tr>
+              <th>Mesa</th>
+              <th>Clientes</th>
+              <th>Jogos</th>
+              <th>Status</th>
+              <th>Inicio</th>
+              <th>Fim</th>
+              <th></th>
+            </tr>
+
+          </table>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    
+    <br />
+    <br />
+    <br />
+    
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h1>Efetuar Reserva</h1>
+        </div>
+      </div>
+      <div class="row blog-entries">
+        <div class="col-md-12 col-lg-8 main-content">
+
+          <form action="#" method="post" id="formreserva">
+            <div class="row">
+              <div class="col-md-3 form-group">
+                <label for="mesa">Mesa</label>
+                <select id="selectmesas" class="form-control ">
+                </select>
+              </div>
+              <div class="col-md-3 form-group">
+                <label for="clientes">Clientes</label>
+                <select multiple id="selectclientes" class="form-control ">
+                </select>
+              </div>
+              <div class="col-md-3 form-group">
+                <label for="jogos">Jogos</label>
+                <select id="selectjogos" class="form-control ">
+                </select>
+              </div>
+              <div class="col-md-3 form-group">
+                <label for="status">Status</label>
+                <select id="status" class="form-control ">
+                    <option value="ABERTO">ABERTO</option>
+                    <option value="EM ANDAMENTO">EM ANDAMENTO</option>
+                    <option value="FECHADO">FECHADO</option>
+                </select>
+              </div>
+              </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="submit" value="Ok" class="btn btn-primary">
+              </div>
+            </div>
+          </form>
+          
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END main-content -->
+
+
+
+
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.0.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+
+
+  <script src="js/main.js"></script>
+  <script>
+   $(document).ready(function(){
+       var reservas = [];
+       $.ajax({
+      url : 'http://localhost:8080/Jogatina/api/reservas',
+      dataType: 'json',
+      type: 'GET',
+      success: function(json){    
+        reservas = json;
+        $.each(json, function(key, value){
+          
+            var ms = value.mesa.nome;
+
+            var cli = '';
+            var clientes = value.clientes;
+            for (var c in clientes) {
+                cli += clientes[c].nome+', ';
+             }
+            cli = cli.slice(0,-2);
+
+            var jgs = '';
+            var jogos = value.jogos;
+            for (var j in jogos) {
+                jgs += jogos[j].titulo+', ';
+             }
+            jgs = jgs.slice(0,-2);
+            
+            var fim = '';
+            if (value.fim == null){ 
+                fim = '---';
+            } else {
+                fim = value.fim;
+            };
+            
+            var html = '<tr>';
+            html += '<td>'+ ms +'</td>';
+            html += '<td>'+ cli +'</td>';
+            html += '<td>'+ jgs +'</td>';
+            html += '<td>'+value.status+'</td>';
+            html += '<td>'+value.inicio+'</td>';
+            html += '<td>'+ fim +'</td>';
+            html += '<td>Fechar</td>';
+            html += '</tr>';
+
+            $("table").append(html);
+          });    
+        }
+      });
+       
+       // Cria o SELECT de jogos em estoque
+        $.ajax({
+          type: "GET",
+          url: "http://localhost:8080/Jogatina/api/jogos",
+          success: function(json){
+            $.each(json, function(j, jogo){
+                if (jogo.estoque > 0){
+                    $('#selectjogos').append($('<option>',{
+                        value: jogo.id,
+                        text: jogo.titulo
+                    }));
+                }
+            });              
+          }
+       });
+       // Cria o Select de clientes que não estão em uma mesa
+       $.ajax({
+          type: "GET",
+          url: "http://localhost:8080/Jogatina/api/clientes",
+          success: function(json){
+            var j = json;
+            $.each(reservas, function(r,reserva){
+                $.each(reserva.clientes, function(rc, reservaCliente){
+                  j = j.filter(c => c.nome !== reservaCliente.nome);  
+                });                
+            });
+
+            $.each(j, function(c, cliente){
+                $('#selectclientes').append($('<option>',{
+                        value: cliente.id,
+                        text: cliente.nome
+                    }));
+            });
+          }
+       });
+       // Cria o SELECT de mesas vazias
+       $.ajax({
+          type: "GET",
+          url: "http://localhost:8080/Jogatina/api/mesas",
+          success: function(json){
+            var j = json;
+            $.each(reservas, function(r,reserva){
+                j = j.filter(m => m.nome !== reserva.mesa.nome);
+            });
+                    
+            $.each(j, function(m, mesa){
+               $('#selectmesas').append($('<option>',{
+                    value: mesa.id,
+                    text: mesa.nome
+                }));
+            });              
+          }
+       });
+      
+    $("#formreserva").submit(function(event){         
+
+      var mesa = document.getElementById("selectmesas").value;
+      var clientes = document.getElementById("selectclientes").value;
+      var jogos = document.getElementById("selectjogos").value;
+      var status = document.getElementById("status").value;
+      var d = new Date();
+      var inicio = d.toISOString();
+      
+      let m = {};
+      $.ajax({
+        type: "GET",
+        url: "http://localhost:8080/Jogatina/api/mesas/"+mesa,
+        success: function(json){
+            m = json;
+        }
+     }); 
+     let j = {};
+      $.ajax({
+        type: "GET",
+        url: "http://localhost:8080/Jogatina/api/jogos/"+jogos,
+        success: function(json){
+            j = json;
+        }
+     }); 
+     let c = [];
+     $.each(clientes, function(key,value){
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/Jogatina/api/clientes/"+value,
+            success: function(json){
+                c.push(json);
+            }
+        }); 
+     });
+      
+     
+      let data = {};
+      data.mesa = JSON.stringify(m);
+      data.clientes = JSON.stringify(c);
+      data.jogos = JSON.stringify(j);
+      data.status = status;
+      data.inicio = inicio;
+      data.fim = null;
+      
+      
+      $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/Jogatina/api/reservas",
+        data: JSON.stringify(data),
+        success: function(){
+            let j = {};    
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/Jogatina/api/jogos/"+jogos,
+                success: function(json){
+                    j = json;
+                }
+            });
+            j.estoque = j.estoque-1;
+            $.ajax({
+                type: "PUT",
+                url: "http://localhost:8080/Jogatina/api/jogos/"+jogos,
+                data: JSON.stringify(j),
+                success: function(){},
+                dataType: "json",
+                contentType : "application/json"
+              });          
+        },
+        dataType: "json",
+        contentType : "application/json"
+      });          
+    }); 
+   });
+  </script>
+</body>
+</html>
